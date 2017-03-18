@@ -1,13 +1,13 @@
 {
   "name": "hanbao-basic-mongo",
   "main": "lib/index.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
-    "hanbao-basic-utils": "^0.1.1",
-    "mongodb": "^2.2.25"
+    "hanbao-basic-utils": "^0.1.1"
   },
   "devDependencies": {
-    "hanbao": "^0.1.6"
+    "hanbao": "^0.1.6",
+    "mongodb": "^2.2.25"
   },
   "repository": {
     "type": "git",
