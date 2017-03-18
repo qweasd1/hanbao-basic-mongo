@@ -1,0 +1,12 @@
+{
+  "name": "hanbao-basic-mongo",
+  "main": "lib/index.js",
+  "version": "0.1.0",
+  "dependencies": {
+    "hanbao-basic-utils": "^0.1.1",
+    "mongodb": "^2.2.25"
+  },
+  "devDependencies": {
+    "hanbao": "^0.1.6"
+  }
+}
