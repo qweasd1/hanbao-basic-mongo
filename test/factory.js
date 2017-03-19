@@ -2,7 +2,7 @@
  * Created by tony on 3/17/17.
  */
 'use strict'
-const factory = require('../lib/index');
+const factory = require('../lib/factory');
 const mongodb = require('mongodb');
 
 mongodb.connect("mongodb://localhost:27017/hanbao",null,(err,db)=>{
@@ -10,6 +10,8 @@ mongodb.connect("mongodb://localhost:27017/hanbao",null,(err,db)=>{
   let read = factory.makeReadWithSoftDelete(db,{defaultSelector:{name:1,age:1}})
   read("person",{$limit:1,$select:{name:1}}).then((data)=>{
     console.log(data);
+  }).catch((err)=>{
+    console.log(err);
   })
   
   // let create = factory.makeCreateWithSoftDelete(db)
