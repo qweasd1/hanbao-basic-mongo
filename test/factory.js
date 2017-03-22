@@ -8,7 +8,14 @@ const mongodb = require('mongodb');
 mongodb.connect("mongodb://localhost:27017/hanbao",null,(err,db)=>{
   
   let read = factory.makeReadWithSoftDelete(db,{defaultSelector:{name:1,age:1}})
-  read("person",{$limit:1,$select:{name:1}}).then((data)=>{
+  read("person",
+    {
+      name:{$in:["jane","jimmy"]},
+      // $select:{name:1},
+      $limit:3,
+      $single:true,
+      $sort:{name:-1}
+    }).then((data)=>{
     console.log(data);
   }).catch((err)=>{
     console.log(err);
